@@ -1,5 +1,7 @@
 # 🎄 Advent of Code 2020 - Python Solutions 🐍
 
+![Advent of Code Screenshot](./images/aoc_screenshot.png)
+
 This repo contains solutions for [Advent of Code 2020](https://adventofcode.com/2020/) that utilise
 tools from the "[open data science stack](https://pydata.org/about/)" such as Python, numpy and
 pandas.
