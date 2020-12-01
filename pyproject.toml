@@ -1,0 +1,54 @@
+[tool.black]
+line-length = 100
+target-version = ['py38']
+
+[tool.isort]
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+line_length = 100
+default_section = "THIRDPARTY"
+sections = "FUTURE,STDLIB,THIRDPARTY,FIRSTPARTY,LOCALFOLDER"
+
+[tool.pylint.MASTER]
+extension-pkg-whitelist = "numpy"
+load-plugins = [
+    'pylint.extensions.bad_builtin',
+    'pylint.extensions.check_elif',
+    'pylint.extensions.redefined_variable_type',
+    'pylint.extensions.overlapping_exceptions',
+]
+
+[tool.pylint."MESSAGES CONTROL"]
+max-line-length = 100
+max-locals = 23
+max-args = 10
+max-branches = 13
+good-names = ['x']
+disable = [
+    "bad-continuation",  # removed in pylint 2.6: https://github.com/PyCQA/pylint/commit/7885d56f33b7757d7ebe4dec960d3589f28579ed
+    "broad-except",
+    "import-error",
+    "import-outside-toplevel",
+    "logging-fstring-interpolation",
+    "missing-class-docstring",
+    "missing-function-docstring",
+    "missing-module-docstring",
+    "no-name-in-module",
+    "redefined-outer-name",
+    "too-few-public-methods", # flags errors for attrs.
+    "abstract-class-instantiated", # https://github.com/PyCQA/pylint/issues/3060
+    # added for this project
+    "arguments-differ",
+]
+logging-format-style="new"
+
+[tool.pytest.ini_options]
+addopts = "--strict-config --strict-markers"
+xfail_strict = true
+junit_family = "xunit2"
+filterwarnings = [
+    "error",
+    "ignore:numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject:RuntimeWarning",
+]

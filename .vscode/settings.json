@@ -1,0 +1,19 @@
+{
+  "python.linting.flake8Enabled": true,
+  "python.linting.flake8Args": [],
+  "python.formatting.provider": "black",
+  "python.formatting.blackArgs": [],
+  "editor.formatOnSave": true,
+  "python.sortImports.args": ["--recursive"],
+  "[python]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    },
+    "editor.formatOnPaste": false
+  },
+  "python.linting.enabled": true,
+  "cSpell.enabled": false,
+  "python.linting.pycodestyleArgs": [
+    "--ignore=E203,E501"
+  ]
+}
