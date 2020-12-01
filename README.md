@@ -6,25 +6,21 @@ This repo contains solutions for [Advent of Code 2020](https://adventofcode.com/
 tools from the "[open data science stack](https://pydata.org/about/)" such as Python, numpy and
 pandas.
 
-This repo uses Jupyter Notebook extensions so it's recommended to load the notebooks in `jupyter
-notebook` and not `jupyter lab`.
-
 ## Features
 
-- **`solutions == best_practice`** Solutions aim to use best practices relevant to data scientists
-  working using the "[open data science stack](https://pydata.org/about/)" such as Python, numpy
-  and pandas.
-- **`best_practice == working_readable_code`** My definition of "best practice" does not mean "only
+- **`solutions == best_practice`** &nbsp; Solutions aim to use best practices relevant to **data
+  scientists** working using the "[open data science stack](https://pydata.org/about/)" such as
+  Python, numpy and pandas.
+- **`best_practice == working_readable_code`** &nbsp; My definition of "best practice" does not mean "only
   using the Python standard library" or "using minimal code" or even "using the most speed
   efficient code". This is not a [code golf](https://en.wikipedia.org/wiki/Code_golf) repo. My goal
-  is to write code that gets the job and is easy to understand. If there's an opportunity to
-  showcase a neat feature of Python or one if its third party libraries, even better! **If you
-  think you have a better solution, I'd love to see your PR!**
-- **`code == pep8_compliant`** All `code.py` solution scripts are
+  is to write code that **gets the job done and is easy to understand**. If there's an opportunity
+  to showcase a neat feature of Python or one if its third party libraries, even better! **_If you
+  think you have a better solution, I'd love to see your PR!_**
+- **`code == pep8_compliant`** &nbsp; All `code.py` solution scripts are
   [PEP8](https://www.python.org/dev/peps/pep-0008/) compliant and have furthermore been linted
-  using `flake8`, `isort`, `pylint`, auto-formatted using `black` and type hints are linted using
-  `mypy` .
-- **`pip-tools`:** The `requirements.txt` is generated and managed by `pip-tools` from a minimal
+  using `flake8`, `isort`, `pylint`, auto-formatted using `black` and type hinted using `mypy` .
+- **`pip-sync to start`** &nbsp; The `requirements.txt` is generated and managed by `pip-tools` from a minimal
   requirements set specified in `requirements.in` and has hash-checking for added security.
 - **The notebooks are written as a teaching resource.** They explain each solutions step-by-step,
   so if there's something you're unfamiliar with in one of the `code.py` scripts, check out the
